@@ -63,7 +63,7 @@ const Detail = () => {
                   </div>
                 </div>
               ) : (
-                <div className="flex flex-col gap-5 mt-10">
+                <div className="flex flex-col gap-5 mt-10 px-2 text-sm">
                   <div className="flex w-full justify-between">
                     <p>Creators</p>
                     <p className="w-3/4">{item.Creators}</p>
