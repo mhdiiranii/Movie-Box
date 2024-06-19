@@ -59,7 +59,7 @@ const Header = () => {
           <MdLocalMovies size={30} className="bg-yellow-400 rounded-lg py-0.5 text-black" />
           <p>Movie Box</p>
         </div>
-        <div className={`flex items-start`}>
+        <div className={`flex items-center h-10`}>
           <div className={`${open ? "max-md:w-0 p-0" : "max-md:w-auto p-2"}  overflow-auto flex max-sm:text-xs`}>
             {routes.map((item) => (
               <button
@@ -71,9 +71,9 @@ const Header = () => {
               </button>
             ))}
           </div>
-          <input type="text" className={`${open ? "w-52 p-2 bg-white bg-opacity-50 " : "w-0"} h-8 duration-300 overflow-hidden bg-inherit outline-none text-sm rounded-lg mx-2`} />
-          <button onClick={() => setOpen(() => (open ? false : true))}>
-            <CiSearch size={30} />
+          <input type="text" className={`${open ? "w-52 p-2 bg-white bg-opacity-50 " : "w-0"} h-8 duration-300 overflow-hidden bg-inherit outline-none text-sm rounded-lg m-2`} />
+          <button className="m-2 text-2xl" onClick={() => setOpen(() => (open ? false : true))}>
+            <CiSearch/>
           </button>
         </div>
       </div>
