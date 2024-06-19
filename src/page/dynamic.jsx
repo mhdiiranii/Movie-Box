@@ -9,24 +9,26 @@ const Detail = () => {
       {movie
         .filter((item) => item.id == path.slice(18))
         .map((item) => (
-          <div key={item.id}>
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                right: 0,
-                left: 0,
-                bottom: 0,
-                backgroundImage: `url(${item.imageSrc})`,
-                backgroundRepeat: "no-repeat",
-                objectFit: "cover",
-                backgroundPosition: "right",
-                backgroundSize: "75% 100%",
-                zIndex: "-2",
-              }}
-            ></div>
+          <div className="flex flex-col" key={item.id}>
+            <div className="max-md:relative max-md:min-h-96">
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: 0,
+                  left: 0,
+                  bottom: 0,
+                  backgroundImage: `url(${item.imageSrc})`,
+                  backgroundRepeat: "no-repeat",
+                  objectFit: "cover",
+                  backgroundPosition: "right",
+                  backgroundSize: "75% 100%",
+                  zIndex: "-2",
+                }}
+              ></div>
+            </div>
             <div className="bg-gradient-to-r from-[rgba(0,0,0,1)] from-20% via-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.3)] absolute right-0 top-0 bottom-0 left-0 z-[-1] "></div>
-            <div key={item.id} className="max-md:h-screen max-md:justify-center w-full md:w-[60%] lg:w-[40%]  z-50 animation-Tooltip flex flex-col max-md:px-6 md:ml-[5%] md:mt-[12%] lg:mt-[6%]">
+            <div key={item.id} className="max-md:justify-start w-full md:w-[60%] lg:w-[40%]  z-50 animation-Tooltip flex flex-col max-md:px-6 mt-5 md:ml-[5%] md:mt-[12%] lg:mt-[6%]">
               <div className="flex justify-between items-start gap-10 px-2">
                 <h1 className="text-lg md:text-xl lg:text-2xl font-bold ">{item.title}</h1>
                 <p className="">{item.year}</p>
@@ -46,7 +48,7 @@ const Detail = () => {
               <span className="w-full h-[1px] my-2 bg-gray-400"></span>
               <div className="text-xs px-2">{item.description}</div>
               {item.type == "movie" ? (
-                <div className="flex flex-col gap-5 mt-10">
+                <div className="flex flex-col gap-5 mt-10 px-2 text-sm">
                   <div className="flex w-full justify-between">
                     <p>Director</p>
                     <p className="w-3/4">{item.Director}</p>

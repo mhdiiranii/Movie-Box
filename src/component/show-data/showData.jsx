@@ -60,7 +60,7 @@ const ShowData = ({ myData }) => {
               </div>
               <div className="px-4 flex flex-wrap">
                 {item.genre?.map((itemGenre) => (
-                  <span key={itemGenre.id} className="bg-[rgba(0,0,0,0.2)] mr-2 px-6 py-2 rounded-full text-xs ">
+                  <span key={itemGenre.id} className="bg-[rgba(0,0,0,0.2)] mr-2 px-3 py-2 md:px-6 md:py-2 rounded-full text-[9px] md:text-xs ">
                     {itemGenre.title}
                   </span>
                 ))}
