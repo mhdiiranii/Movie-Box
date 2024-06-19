@@ -70,12 +70,12 @@ const SliderShow = ({ myslide = [], className = "", classNameImage = "", duratio
   };
 
   return (
-    <div className="flex flex-col max-sm:flex-col-reverse" style={{ position: "relative" }}>
-      <div className=" px-4  flex flex-row-reverse justify-center items-center">
-        <button onClick={next} className="hover:bg-[rgba(255,255,255,0.4)] hover:text-[rgba(0,0,0,0.8)]  p-4 text-2xl duration-300 rounded-full ">
+    <div className="flex flex-col mb-2 max-sm:flex-col-reverse" style={{ position: "relative" }}>
+      <div className="flex flex-row-reverse justify-center gap-2 items-center">
+        <button onClick={next} className="md:hover:bg-[rgba(255,255,255,0.4)] md:hover:text-[rgba(0,0,0,0.8)] p-2 md:p-4 text-lg md:text-lg lg-text-xl duration-300 rounded-full ">
           <GrNext />
         </button>
-        <button onClick={previous} className="hover:bg-[rgba(255,255,255,0.4)] hover:text-[rgba(0,0,0,0.8)] duration-300  p-4 text-2xl rounded-full">
+        <button onClick={previous} className="md:hover:bg-[rgba(255,255,255,0.4)] md:hover:text-[rgba(0,0,0,0.8)] duration-300 p-2 md:p-4 text-lg md:text-lg lg-text-xl rounded-full">
           <GrPrevious />
         </button>
       </div>
